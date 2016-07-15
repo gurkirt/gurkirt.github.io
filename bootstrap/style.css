@@ -1,3 +1,9 @@
+html, body {
+  font-size: 18px;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
 
 .header{
   font-family: 'Roboto', sans-serif;
@@ -13,9 +19,15 @@
   color: #05A;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 1000;
-  color: #000;
+.jumbotron {
+    background-color:transparent !important;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.pubwrap {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #DDD;
 }
