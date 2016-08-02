@@ -16,6 +16,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 800;
+  margin-bottom: 20px;
   color: #05A;
 }
 
@@ -74,7 +75,7 @@ html, body {
 }
 .pubwrap {
   padding-bottom: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #DDD;
 }
 .pub {
