@@ -62,7 +62,9 @@ html, body {
 }
 .publ {
   padding-top: 10px;
+  margin-left:  -40px;
   text-align: left;
+  
 }
 .publ li {
   border: 1px solid #CCC;
