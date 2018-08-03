@@ -69,7 +69,7 @@
 
 		<h2 class="hh">About Me (<a href="resources/cv.pdf">CV</a>)</h2>
 		<p>
-			I am a first year PhD student in 
+			I am a final year PhD student in 
 			<a href="http://cct.brookes.ac.uk/research/isec/artificial-intelligence/index.html">Artificial Intelligence and Vision Group</a>
 			at <a href="https://www.brookes.ac.uk/">Oxford Brookes University</a>.
 			I am advised by <a href="http://cms.brookes.ac.uk/staff/FabioCuzzolin/">Dr. Fabio Cuzzolin</a>.
@@ -91,9 +91,12 @@
 	<div class="container">
 
 		<h2 class="hh">News</h2>
+    <p>August 2018: Our paper on "Predicting Action Tubes" is accpted at AHB2018 workshop at ECCV, 2018</p>
+    <p>July 2018: Our paper on "Incremental Tube Construction for Human Action Detection" is accpted at BMVC, York, 2018</p>
     <p>Dec 2017: Pytorch implementation of our work on <a href="https://arxiv.org/pdf/1611.08563.pdf">Online Real-time action Detection</a> is available on <a href="https://github.com/gurkirt/realtime-action-detection">GitHub</a></p>
     <p>Dec 2017: Pytorch implementation of <a href="https://arxiv.org/pdf/1406.2199.pdf">Two stream</a> InceptionV3 trained for action recognition using <a href="https://deepmind.com/research/open-source/open-source-datasets/kinetics/">Kinetics</a> dataset is available on <a href="https://github.com/gurkirt/realtime-action-detection">GitHub</a></p>
-		<p>July 2017: My work at Disney Research Pittsburgh with <a href="http://cs.brown.edu/~ls/">Leonid Sigal</a> and <a href="https://ps.is.tuebingen.mpg.de/person/alehrmann">Andreas Lehrmann</a> secured 2nd place in <a href="http://vuchallenge.org/charades.html">charades challenge</a></p>
+		<p>July 2017: My work at Disney Research Pittsburgh with <a href="http://cs.brown.edu/~ls/">Leonid Sigal</a> and <a href="https://ps.is.tuebingen.mpg.de/person/alehrmann">Andreas Lehrmann</a> secured 2nd place in <a href="http://vuchallenge.org/charades.html">charades challenge</a>, 
+    second only to DeepMind entery</p>
 		<p>July 2017: <span style="color:blue">Two</span> paper got accpted at ICCV 2017, avaiable below. 
 		<p>June 2016: Our paper on "Deep Learning for Detecting Multiple Space-Time Action Tubes in Videos" is accpted at BMVC, York, 2016</p>
 		<p>June 2016: Our team secures the <span style="color:blue">2nd</span> place at ActivityNet Challenge 2016 in activity detection task [<a href="http://activity-net.org/challenges/2016/program.html">Results</a>].
@@ -114,7 +117,34 @@
 	<div class="container">
 
 	<h2 class="hh" style="margin-bottom:40px">Publications <a href="https://scholar.google.com/citations?user=w8XHUMIAAAAJ&hl=en" target="_blank"><img src="resources/icons/google_scholar.png" ></a> </h2>
-	
+	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./resources/projects/ahb2018_tpnet.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Predicting Action Tubes</div>
+            <div class="pubd">we present a method to predict an entire ‘action tube’ in a trimmed video just by observing a smaller subset of video. We propose a Tube Prediction network (TPnet) which jointly predicts the past, present and future bounding boxes along with
+             their action classification scores. At test time TPnet is used in a (temporal) slid-
+             ing window setting, and its predictions are put into a tube estimation framework
+            to construct/predict the video long action tubes not only for the observed part of
+               the video but also for the unobserved part</div>
+            <div class="puba">Gurkirt Singh, Suman Saha, Fabio Cuzzolin.</div>
+            <div class="pubv">AHB - ECCVW 2018 </div>
+            <div class="publ">
+        <ul>
+          <li><a href="#">PDF</a></li>
+          <li><a href="#">Poster</li>
+          <li><a href="#">Video</a></li>
+        </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
