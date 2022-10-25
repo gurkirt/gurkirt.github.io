@@ -96,6 +96,8 @@
     <h2 class="hh">News</h2>
     <!--     <p> <span style="color:#DC7633">I will be graduating towards the end of 2019; looking for full-time researcher and Postdoc positions.</span> </p> -->
     <!-- <p> Download <a href="resources/test.zip" download>test.zip</a> to evaluate your models on <a href="https://saras-esad.grand-challenge.org/">SARAS-ESAD challenge</a></p> -->
+    <p> Oct 2022:  We won MultiSports spatio-temporal action detection challenge and presneted our method at <a href="https://deeperaction.github.io/results/index.html">DeeperAction Workshop ECCV'22</a></p>  
+    <p> Sept 2022:  Two papers accpted for publication at <a href="https://wacv2023.thecvf.com/home">WACV'23</a> </p>  
     <p> Jan 2022:  <a href="https://www.computer.org/csdl/journal/tp/5555/01/09712346/1AZL0P4dL1e">ROAD paper</a> is accpted for publication at TPAMI</p>    
     <p> OCT 2021:  <a href="https://eval.ai/web/challenges/challenge-page/1059/overview">ROAD challenge hosted with ICCV 2021</a> was a success and still avaible for submissions</p>
     <p> Feb 2021:  <a href="resources/projects/road.html">ROAD</a> dataset is now online</p>
@@ -121,7 +123,8 @@
 	<div class="container">
 
 		<h2 class="hh">Contests</h2>
-		<p>Charades Challenge, <a href="http://vuchallenge.org/charades.html">2017</a>: Acton Recognition, Rank: 2/10, Temporal Action Segmentation, Rank: 3/6.</p>
+    <p>MultiSports Challenge, <a href="https://deeperaction.github.io/results/index.html">2022</a>: Spatio-temporal action detection, Rank: 1/1.</p>
+    <p>Charades Challenge, <a href="http://vuchallenge.org/charades.html">2017</a>: Acton Recognition, Rank: 2/10, Temporal Action Segmentation, Rank: 3/6.</p>
 		<p>ActivityNet Challenge, <a href="http://activity-net.org/challenges/2017/evaluation.html">2017</a>: Untrimmed Video Classification, Rank: 3/29.</p> 
 		<p>ActivityNet Challenge, <a href="http://activity-net.org/challenges/2016/evaluation.html">2016</a>: Untrimmed Video Classification, Rank: 10/24, <span style="color:blue">Actvity detection</span>, Rank: 2/6.</p>
 		<p>ChaLearn Looking at People Challenge, 2014 , Gesture detection, Rank: 7/17.</p>
@@ -130,18 +133,49 @@
 	</div>
 	<div class="container">
 
-	<h2 class="hh" style="margin-bottom:40px">Publications <a href="https://scholar.google.com/citations?user=w8XHUMIAAAAJ&hl=en" target="_blank"><img src="resources/icons/google_scholar.png" ></a> </h2>
+	<h2 class="hh" style="margin-bottom:40px">Selected Publications <a href="https://scholar.google.com/citations?user=w8XHUMIAAAAJ&hl=en" target="_blank"><img src="resources/icons/google_scholar.png" ></a> </h2>
   
+
 
 
   <div class="pubwrap">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-3">
+        <div class="pubimg">
+          <img src="./resources/projects/multisports_certificate.jpg" scale:0.5>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="pub">
+          <div class="pubt">Spatio-Temporal Action Detection Under Large Motion</div>
+          <div class="pubd">we aim to study the performance of cuboid-aware feature aggregation in action detection under large action. Further, we propose to enhance actor feature representation under large motion by tracking actors and performing temporal feature aggregation along the respective tracks. We define the actor motion with intersection-over-union (IoU) between the boxes of action tubes/tracks at various fixed time
+            scales. The action having a large motion would result in lower IoU over time, and slower actions would maintain higher IoU. We find that track-aware feature aggregation consistently achieves a large improvement in action detection performance, especially for actions under large motion compared to cuboid-aware baseline. As a result, we also report state-of-the-art on the large-scale MultiSports dataset.</div>
+          <div class="puba">Gurkirt Singh, </div>
+          <div class="pubv"> <a href="https://wacv2023.thecvf.com/home">WACV 2023</a> & MultiSports Challenge Winner <a href="https://deeperaction.github.io/results/index.html"> DeeperAction Workshop ECCV 2022</a></div>
+          <div class="publ">
+            <ul>
+              <li><a href="https://arxiv.org/abs/2209.02250">ARXIV</a></li>
+              <li><a href="https://github.com/gurkirt/ActionTrackDetectron">Code</a></li>
+              <li><a href="./resources/projects/multisports_slides.pdf">Slides</a></li>
+              <li><a href="https://deeperaction.github.io/results/index.html">Challenge Results</a></li>
+              <!-- <li><a href="#">Code</li> -->
+              <!-- <li><a href="resources/poster_cecvW.pdf">Presentation</li> -->
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-3">
         <div class="pubimg">
           <img src="./resources/projects/road_frames.jpg" scale:0.5>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-9">
         <div class="pub">
           <div class="pubt">ROAD: The ROad event Awareness Dataset for Autonomous Driving</div>
           <div class="pubd">we introduce the ROad event Awareness Dataset (ROAD) for Autonomous Driving, to our knowledge the first of its kind. ROAD is designed to test an autonomous vehicles ability to detect road events, defined as triplets composed by an active agent, the action(s) it performs and the corresponding scene locations. ROAD comprises videos originally from the Oxford RobotCar Dataset annotated with bounding boxes showing the location in the image plane of each road event. We benchmark various detection tasks, proposing as a baseline a new incremental algorithm for online road event awareness termed 3D-RetinaNet. We also report the performance on the ROAD tasks of Slowfast and YOLOv5 detectors, as well as that of the winners of the ICCV2021 ROAD challenge.</div>
@@ -149,10 +183,11 @@
           <div class="pubv"><a href="https://www.computer.org/csdl/journal/tp/5555/01/09712346/1AZL0P4dL1e">TPAMI 2022</a></div>
           <div class="publ">
       <ul>
+        <li><a href="https://arxiv.org/abs/2102.11585">ARXIV</a></li>
         <li><a href="https://arxiv.org/pdf/2102.11585.pdf">PDF</a></li>
-        <li><a href="https://github.com/gurkirt/3D-RetinaNet">Code</li>
-        <li><a href="https://github.com/gurkirt/road-dataset">Dataset</li>
-        <li><a href="https://eval.ai/web/challenges/challenge-page/1059/overview">Challenge</li>
+        <li><a href="https://github.com/gurkirt/3D-RetinaNet">Code</a></li>
+        <li><a href="https://github.com/gurkirt/road-dataset">Dataset</a></li>
+        <li><a href="https://eval.ai/web/challenges/challenge-page/1059/overview">Challenge</a></li>
         <!-- <li><a href="#">Code</li> -->
         <!-- <li><a href="resources/poster_cecvW.pdf">Presentation</li> -->
       </ul>
@@ -164,12 +199,12 @@
 
   <div class="pubwrap">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="pubimg">
           <img src="./resources/projects/rcn.svg" scale:2>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-9">
         <div class="pub">
           <div class="pubt">Recurrent Convolutions for Causal 3D CNNs</div>
           <div class="pubd">we propose a novel Recurrent Convolutional Network (RCN), which relies on recurrence to capture the temporal context across frames at each network level. 
@@ -195,12 +230,12 @@
 
   <div class="pubwrap">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="pubimg">
           <img src="./resources/projects/video-captioning.png" scale:2>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-9">
         <div class="pub">
           <div class="pubt">End-to-End Video Captioning</div>
           <div class="pubd">we propose to optimise both encoder and decoder simultaneously in an end-to-end fashion. 
@@ -226,12 +261,12 @@
   
   <div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/ahb2018_tpnet.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Predicting Action Tubes</div>
             <div class="pubd">we present a method to predict an entire ‘action tube’ in a trimmed video just by observing a smaller subset of video. We propose a Tube Prediction network (TPnet) which jointly predicts the past, present and future bounding boxes along with
@@ -255,12 +290,12 @@
 
 <div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/accv_overview.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">TraMNet - Transition Matrix Network for Efficient Action Tube Proposals</div>
             <div class="pubd">Current state-of-the-art methods solve spatio-temporal action localisation by extending 2D anchors to 3D-cuboid proposals on stacks of frames, to generate sets of temporally connected bounding boxes called action micro-tubes. To avoid this problem we introduce a Transition-Matrix-based Network (TraMNet) which relies on computing transition probabilities between anchor proposals while maximising their overlap with ground truth bounding boxes across frames, and enforcing sparsity via a transition threshold. As the resulting transition matrix is sparse and stochastic, this reduces the proposal hypothesis search space from O(n^f) to the cardinality of the thresholded matrix. </div>
@@ -280,12 +315,12 @@
 
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/cvpr2017.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Online Real-time Multiple Spatiotemporal Action Localisation and Prediction</div>
             <div class="pubd">We present a method for multiple spatiotemporal action localisation, 
@@ -308,12 +343,12 @@
 	
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/iccv2017_amtnet.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">AMTnet: Action-Micro-Tube regression by end-to-end trainable deep architecture.</div>
             <div class="pubd">Dominant approaches provides sub-optimal solutions to the action dection problem, as they rely on seeking frame-level detections and construting tubes from them. In this paper we radically depart from current practice, and take a first step towards the design and implementation of a deep network architecture able to classify and regress video-level micro-tubes.</div>
@@ -333,12 +368,12 @@
 
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/BMVC2016icon.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Deep Learning for Detecting Multiple Space-Time Action Tubes in Videos</div>
             <div class="pubd">In this work we propose a new approach to the spatio-temporal
@@ -363,12 +398,12 @@
 		
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/actnet2016.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Untrimmed Video Classification for Activity Detection: submission to ActivityNet Challenge</div>
             <div class="pubd">In this work we propose a simple, yet effective, method for the temporal detection
@@ -391,12 +426,12 @@
 	
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/continousGesture.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Continuous gesture recognition from articulated poses</div>
             <div class="pubd">This paper addresses the problem of continuous gesture recognition from articulated poses.
@@ -423,12 +458,12 @@
 	
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/skeletalQuads.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Skeletal Quads:Human action recognition using joint quadruples</div>
             <div class="pubd"> In this context, we propose a local skeleton descriptor that encodes
@@ -455,12 +490,12 @@
 	
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/masterThesis.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Frame-wise representations of depth videos for action recognition</div>
             <div class="pubd"> We present three types of depth data representation from depth frames, which are referred as single-reference representation, multiple-reference representation and Quad representation.</div>
@@ -480,12 +515,12 @@
 	
 	<div class="pubwrap">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="pubimg">
             <img src="./resources/projects/btechThesis.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
           <div class="pub">
             <div class="pubt">Categorizing Abnormal behavior from and indoor overhead camera</div>
             <div class="pubd"> We propose an approach using overhead camera to detect abnormal activties with help trajectory classification.</div>
