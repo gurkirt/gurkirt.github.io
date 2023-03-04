@@ -20,10 +20,13 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[10pt,letterpaper]{article} % Font size and paper type
+\LoadClass[11pt,letterpaper]{article} % Font size and paper type
 \usepackage{academicons}
 \usepackage{fontawesome}
 \usepackage{multicol}
+\usepackage{vwcol}  
+\usepackage{lipsum}
+\usepackage{paracol}
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
@@ -102,7 +105,7 @@
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.0em} % Margin within the section
+    \setlength{\leftmargin}{0.1em} % Margin within the section
   }
   \item[]
 }{
@@ -110,17 +113,17 @@
 }
 
 \newenvironment{mSection}[2]{ % 1 input argument - section name
-  \sectionskip
-  {\bf \MakeUppercase  #1} % Section title
-  {{\quad #2}}
-  \sectionlineskip
-  \hrule % Horizontal line
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0.4em} % Margin within the section
-  }
-  \item[]
+\sectionskip
+{\bf \MakeUppercase  #1} % Section title
+{{\quad #2}}
+\sectionlineskip
+\hrule % Horizontal line
+\begin{list}{}{ % List for each individual item in the section
+  \setlength{\leftmargin}{0.1em} % Margin within the section
+}
+\item[]
 }{
-  \end{list}
+\end{list}
 }
 
 \newenvironment{sSubsection}[1]{ % 4 input arguments - company name, year(s) employed, job title and location
@@ -132,7 +135,7 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
+ {\bf \footnotesize{#1,}} \footnotesize{{ #2} { \em #3}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
 %  {\bf \footnotesize{#3,}} \footnotesize{{ \quad \em #1 #2}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
 %  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
 %   \\
