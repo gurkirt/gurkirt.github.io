@@ -102,7 +102,7 @@
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0.8em} % Margin within the section
+    \setlength{\leftmargin}{1.0em} % Margin within the section
   }
   \item[]
 }{
@@ -132,8 +132,8 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-%  {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
- {\bf \footnotesize{#3,}} \footnotesize{{ \quad \em #1 #2}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
+ {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
+%  {\bf \footnotesize{#3,}} \footnotesize{{ \quad \em #1 #2}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
 %  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
 %   \\
 %   {\em #3} \hfill {\em #4} % Italic job title and location
