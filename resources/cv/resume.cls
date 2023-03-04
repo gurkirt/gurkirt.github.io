@@ -112,48 +112,41 @@
   \end{list}
 }
 
-\newenvironment{mSection}[2]{ % 1 input argument - section name
-\sectionskip
-{\bf \MakeUppercase  #1} % Section title
-{{\quad #2}}
-\sectionlineskip
-\hrule % Horizontal line
-\begin{list}{}{ % List for each individual item in the section
-  \setlength{\leftmargin}{0.1em} % Margin within the section
-}
-\item[]
-}{
-\end{list}
-}
+% \newenvironment{mSection}[2]{ % 1 input argument - section name
+% \sectionskip
+% {\bf \MakeUppercase  #1} % Section title
+% {{\quad #2}}
+% \sectionlineskip
+% \hrule % Horizontal line
+% \begin{list}{}{ % List for each individual item in the section
+%   \setlength{\leftmargin}{0.1em} % Margin within the section
+% }
+% \item[]
+% }{
+% \end{list}
+% }
 
-\newenvironment{sSubsection}[1]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\footnotesize{#1.}}
-}
+
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf \footnotesize{#1,}} \footnotesize{{ #2} { \em #3}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
-%  {\bf \footnotesize{#3,}} \footnotesize{{ \quad \em #1 #2}} \hfill {\em \footnotesize{#4}} % Bold company name and date on the right
-%  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-%   \\
-%   {\em #3} \hfill {\em #4} % Italic job title and location
-%   }\smallskip
-%   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-%    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-%   }{
-%   \end{list}
-%   \vspace{0.5em} % Some space after the list of bullet points
+\footnotesize{{\bf #1,} { #2} { \em #3} \hfill {\em #4}} % Bold company name and date on the right
 }
 
 \newenvironment{eSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} 
+%  {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} 
+\footnotesize{{\bf #1,} { #2} { \em #3} \hfill {\em #4}} % Bold company name and date on the right
+}
+
+\newenvironment{sSubsection}[1]{ % 4 input arguments - company name, year(s) employed, job title and location
+ \footnotesize{#1.}
 }
 
 \newenvironment{pSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\footnotesize{#1, #2, \quad \em #3,}} \footnotesize{{#4}} 
+ {\footnotesize{#1, #2, {\em #3}, #4}} 
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
