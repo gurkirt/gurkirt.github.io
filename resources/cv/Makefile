@@ -4,7 +4,7 @@ foo=gurkirt_singh_cv
 
 pdf: *.tex
 	pdflatex $(foo).tex
-	evince $(foo).pdf &
+	open $(foo).pdf &
 
 bib: *.tex
 	pdflatex $(foo)
