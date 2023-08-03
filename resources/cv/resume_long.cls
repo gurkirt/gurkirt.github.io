@@ -18,34 +18,24 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\ProvidesClass{resume_long}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[12pt,letterpaper]{article} % Font size and paper type
-\usepackage{academicons}
-\usepackage{fontawesome}
-\usepackage{multicol}
-% \usepackage{vwcol}  
-% \usepackage{lipsum}
-\usepackage{paracol}
+\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 
 \pagestyle{empty} % Suppress page numbers
-% \newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!80!black}#1} #2\hspace{2em}}
+
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
 
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
-
-\def \aboutme#1{\def\@aboutme{\footnotesize{\textbf{About Me}: #1}}} % Defines the \name command to set name
-\def \@aboutme {} % Sets \@name to empty by default
-
 \def \jobaddress#1{\def\@jobaddress{#1}} % Defines the \name command to set name
 \def \@jobaddress {} % Sets \@name to empty by default
-
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
 % One, two or three address lines can be specified 
@@ -75,7 +65,7 @@
   \addressskip
 }
 
-% \printname is used to print the name as a page header
+
 \def \printname {
   \begingroup
     \hfil{{\namesize\bf \@name}}\hfil
@@ -83,14 +73,18 @@
   \endgroup
 }
 
-% def \printaboutme {
-%     \@aboutme
-%     \aboutmeskip\break
-% }
-
 %----------------------------------------------------------------------------------------
 %	PRINT THE HEADING LINES
 %----------------------------------------------------------------------------------------
+\def \printaddress #1{
+  \begingroup
+    \def \\ {\addressSep\ }
+    \centerline{#1}
+  \endgroup
+  \par
+  \addressskip
+}
+
 
 \let\ori@document=\document
 \renewcommand{\document}{
@@ -104,7 +98,6 @@
     \printaddress{\@addresstwo}}
      \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
-  \@aboutme
 }
 
 %----------------------------------------------------------------------------------------
@@ -114,65 +107,38 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[2]{ % 1 input argument - section name
   \sectionskip
-  {\bf \MakeUppercase  #1} % Section title
-  {{\quad #2}}
+  {{\bf #1}} % Section title
+  {{\quad #2}} % Section subtitle
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\parsep}{0.25em}
-    \setlength{\leftmargin}{0.1em} % Margin within the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
   }
   \item[]
 }{
   \end{list}
 }
 
-% \newenvironment{mSection}[2]{ % 1 input argument - section name
-% \sectionskip
-% {\bf \MakeUppercase  #1} % Section title
-% {{\quad #2}}
-% \sectionlineskip
-% \hrule % Horizontal line
-% \begin{list}{}{ % List for each individual item in the section
-%   \setlength{\leftmargin}{0.1em} % Margin within the section
-% }
-% \item[]
-% }{
-% \end{list}
-% }
-
-
-
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4}} % Bold company name and date on the right
-}
-
-\newenvironment{eSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-%  {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} 
-\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4}} % Bold company name and date on the right
-}
-
-\newenvironment{sSubsection}[1]{ % 4 input arguments - company name, year(s) employed, job title and location
- \footnotesize{#1.}
-}
-
-\newenvironment{lSubsection}[1]{ % 4 input arguments - company name, year(s) employed, job title and location
- {#1.}
-}
-
-
-\newenvironment{pSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-\footnotesize{#1, #2, {\em #3}, #4} 
+ {\bf #1} \hfill {#2} % Bold company name and date on the right
+ \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+  \\
+  {\em #3} \hfill {\em #4} % Italic job title and location
+  }\smallskip
+  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{0.5em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\medskip} % The space after your name at the top
-\def\aboutmeskip{\smallskip} % The space after your name at the top
+\def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
