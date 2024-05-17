@@ -1,6 +1,6 @@
 all: pdf
 
-foo=gurkirt_singh_cv
+foo=cv_gurkirt_short_singh
 
 pdf: *.tex
 	pdflatex $(foo).tex
