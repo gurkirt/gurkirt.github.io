@@ -148,7 +148,12 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
-\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4}} % Bold company name and date on the right
+\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4}} % \\{#5}} % Bold company name and date on the right
+}
+
+
+\newenvironment{rSubsections}[5]{ % 4 input arguments - company name, year(s) employed, job title and location
+\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4} \\{#5}} % Bold company name and date on the right
 }
 
 \newenvironment{eSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
