@@ -136,6 +136,16 @@
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
+\newenvironment{rSubsections}[5]{ % 4 input arguments - company name, year(s) employed, job title and location
+\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4} \\{#5}} % Bold company name and date on the right
+}
+
+\newenvironment{eSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+%  {\bf \footnotesize{#1,}} \footnotesize{{ #2} {\quad \em #3}} \hfill {\em \footnotesize{#4}} 
+\footnotesize{{\bf #1,} {#2} {\em#3} \hfill {\em #4}} % Bold company name and date on the right
+}
+
+
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
