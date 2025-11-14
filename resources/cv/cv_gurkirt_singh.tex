@@ -19,10 +19,10 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\documentclass{resume_short} % Use the custom resume.cls style
+\documentclass{resume_long} % Use the custom resume.cls style
 
-\usepackage[left=0.5in,top=0.3in,right=0.7in,bottom=0.3in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.25\textwidth}\rlap{#1}}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \usepackage[pdftex]{hyperref}
 \hypersetup{
@@ -32,167 +32,271 @@
 \name{Gurkirt Singh} % Your name
 % \address{Vison and Media Lab, Simon Fraser University, Burnaby, Canada} % Your address
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-% \jobaddress{Computer Vision Lab, ETH – Zurich, Switzerland}
+\jobaddress{Xovis AG – Bern, Switzerland}
 
-\address{guru094@gmail.com \\ http://gurkirt.github.io/ \\ +41 - 779 774 271} % Your phone number and email
-\aboutme{
-  % I am an adaptive person who is eager to learn to complete tasks at hand.
-  I have 10+ years experience in computer vision across 6 countries.  
-  % I have 9+ years experience of working on computer vision with PyTorch, TF and Caffe. 
-  %  I am proficent in both classical and deep learning methods. 
- I enjoy working on Vision+lanuage, 3D-reconstruction, object detection, 
- semantic segmentation, human pose estimation, and action detection.
-%I am an adaptive person who is always looking for new challenges. Apple is working on the edge of computer vision problems such as 3D reconstruction, Human body poses estimation etc. I have worked on action detection, 3D reconstruction, and human pose estimation; won and participated in many challenges at CVPR/ECCV workshops.
-% player and proficient in many tools such as Git, Python, PyTorch, OpenCV, Open3D, and motivation to learn everything useful/needed.
-}
+\address{guru094@gmail.com \\ http://gurkirt.github.io/ \\ +41 - 779 774 271 \\ B-Permit (open)}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION and Experience SECTION
-%----------------------------------------------------------------------------------------
-% \begin{vwcol}[widths={0.6,0.2}, sep=.8cm, justify=flush,rule=0pt,indent=1em] 
-% \lipsum[1-8] 
-% \begin{multicols}{2}[widths={0.8,0.2}]
-% \begin{vwcol}[widths={0.6\textwidth,0.4\textwidth}, sep=.8cm, justify=flush,rule=0pt,indent=1em] 
 
-\columnratio{0.65,0.31}
-\begin{paracol}{2}
-\setlength{\columnsep}{2em}
-\begin{rSection}{Experience}{\quad Academia: 6+ years, Industry 3+ years}
-  \begin{rSubsections}{Xovis AG}{Bern, CH,}{ML \& CV Engineer}{Oct 23 - Present}{Responsible for design and development of object detection and tracking models, which are deployed on more than 500K embedded devices.}\end{rSubsections}
-  \begin{rSubsections}{ETH}{Zurich, CH,}{Postdoctoral Fellow}{Feb 20, 3.5 years }{Responsible for research support for startups on 3D reconstruction, 3D human pose estimation, and MRI classification.}\end{rSubsections}
-  \begin{rSubsections}{BorealisAI}{Vancouver, CA,}{Research Intern}{Feb 19, 4 months}{Developed human-object relation detection algorithm for videos.}\end{rSubsections}
-  \begin{rSubsections}{Disney Research}{Pittsburgh, US,}{Research Intern}{Feb 17, 6 months}{Action-detection method for ABC's tv-episode meta-data generation.}\end{rSubsections}
-  \begin{rSubsections}{Siemens Research}{Banglore, IN,}{Research Engineer}{Oct 13, 2 years}{Support research team with implementation of CV Algorithms.}\end{rSubsections}
+%----------------------------------------------------------------------------------------
+%	Experience SECTION
+%----------------------------------------------------------------------------------------
+ 
+\begin{rSection}{Experience}{\quad Academia: 4+ years, Industry 4+ years}
+
+  \begin{rSubsections}{Xovis AG}{Bern, CH,}{Senior ML \& CV Engineer}{Since Oct 23, 2 years}{
+    Distillation: Led the design and development of model distillation pipeline. \\
+    -- Distilled Transformer models (ViT) to embedded deployment firendly models. \\
+    Object Detection: Spearheaded the design and development of multi-task object detection and tracking models. \\
+    -- Achieved three times reduction in false postive rate. \\
+    Quantization: Engineered QAT for WinogradConvs to enable deployment on 250K+ embedded devices with FPGA. \\
+    Auto-labeling: Led efforts to optimize and semi-automate the labeling pipeline. \\
+    Multi-modal foundation models: Implemented SSL techniques to train multi-modal foundation models using large quantity unlabeled videos.
+    }\end{rSubsections}
+  \begin{rSubsections}{ETH}{Zurich, CH,}{Postdoctoral Fellow}{Feb 20, 3.5 years }{
+    Responsible for research support for startups with problems such as monocular depth estimation,\\ 3D reconstruction, 3D human pose estimation, and MRI classification.}\end{rSubsections}
+  \begin{rSubsections}{BorealisAI}{Vancouver, CA,}{Research Intern}{Feb 19, 4 months}{
+    Developed human-object relation detection algorithm for videos.}\end{rSubsections}
+  \begin{rSubsections}{Disney Research}{Pittsburgh, US,}{Research Intern}{Feb 17, 6 months}{
+    Developed action-detection method for meta-data generation of ABC's tv-episodes.}\end{rSubsections}
+  \begin{rSubsections}{Siemens Research}{Banglore, IN,}{Research Engineer}{Oct 13, 2 years}{
+    Support research team with implementation of algorithms such as optical-flow and object-tracking.}\end{rSubsections}
   \begin{rSubsections}{INRIA}{Grenoble, FR,}{Research Intern}{Feb 13, 8 months}{Researched on gesture recognition method for RGB-D cameras.}\end{rSubsections}
   % \begin{rSubsections}{IIT}{Delhi, IN,}{Research Assistant}{May 11, 1 year}\end{rSubsections}
   % \begin{rSubsections}{IIT}{Kanpur, IN,}{Research Assistant}{Jul 10, 8 months}\end{rSubsections}
   \begin{rSubsections}{University of Edinburgh}{UK,}{Research Intern}{Jan 10, 4 months}{Worked on anomalous trajectory detection with GMMs.}\end{rSubsections}
-% \sectionlineskip
-% \hrule
+    % \vspace{-0.08in}
 \end{rSection}
 
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
 \begin{rSection}{Education}{}
+
+    % {\bf \footnotesize{Oxford Brookes University}} \hfill {\em \footnotesize{Sept. 2015 - Nov 2019}} 
+    % \\ \footnotesize{Ph.D. Student}; \footnotesize{Supervised by Prof. Fabio Cuzzolin}
+    % {\bf Institut Polytechnique de Grenoble, France} \hfill {\em Sep. 2012 - Jun. 2013} 
+    % \\ \footnotesize{MSc in Informatics at ENSIMAG}; \footnotesize{Advised by Prof. Radu Horaud \& Dr. Georgios Evangelidis}
+    % % \vspace{-0.08in}
+    % {\bf VIT University, Vellore, India} \hfill {\em Aug. 2006 - May 2010} 
+    % \\ \footnotesize{B.Tech}; \footnotesize{Advised by Prf. Bob Fisher \& Prof. Arulmozhivarman Pachiyappan}
+
 \begin{eSubsection}{Oxford Brookes University}{UK}{PhD Computer Vision}{Sep 15, 4 years}\end{eSubsection}
 \begin{eSubsection}{ENSIMAG, INP}{Grenoble, FR}{MSc Informatics}{Sep 12 - 1.2 years}\end{eSubsection}
 \begin{eSubsection}{VIT University}{Vellore, IN}{B.Tech Electronics}{Aug 06 - 4 years}\end{eSubsection} 
+
 \end{rSection}
-
-
 % \vspace{0.1in}
-% \begin{multicols}{2}
-% ---------------
+% \begin{rSection}{Research Interests/Expertise}{}
 
-
-% \vspace{0.1in}
-\begin{rSection}{Mentoring, Teaching, Contributions}{} 
-\begin{sSubsection}{Mentored 13 students: 2 PhD, 8 master, and 3 undergraduate} \end{sSubsection} %% towards successful thesis outcomes}\end{sSubsection}
-\begin{sSubsection}{Supervised 3 undergraduate interns at Siemens}\end{sSubsection}
-% \begin{sSubsection}{Mentored 2 PhD, 8 master, and 3 undergraduate students} \end{sSubsection} %% towards successful thesis outcomes}\end{sSubsection}
-% \begin{sSubsection}{Mentored 3 undergraduate interns at Siemens}\end{sSubsection}
-\begin{sSubsection}{Computer vision and machine learning lectures for postgraduates, 2016-19}\end{sSubsection}
-\begin{sSubsection}{Hands-on session for understanding-programming course, 2016-19}\end{sSubsection}
-\begin{sSubsection}{Co-organised workshops and challenges on ROAD dataset at ICCV 21, and on ESAD dataset on surgeon action detection at MIDL 20}\end{sSubsection}
-% \begin{sSubsection}{Workshop and challenge for surgeon action detection, MIDL 2020}\end{sSubsection}
-\begin{sSubsection}{Regular reviewer for TPAMI, CVPR, ICCV, ECCV, BMVC, IJCIA}\end{sSubsection}
-\begin{sSubsection}{Multple open source projects with 700+ stars and 150+ forks on GitHub}\end{sSubsection}
-% \vspace{0.1in}
-\end{rSection}
-
-% \vspace{0.1in}
-% \begin{rSection}{Recent Research Experience}{} 
-% \begin{sSubsection}{3D-reconstruction: depth estimation, point-cloud registration and semantic segmentation of teeth images for Zaamigo AG}\end{sSubsection}
-% \begin{sSubsection}{Video processing: 7+ years in action recognition, detection, and tracking}\end{sSubsection}
-% \begin{sSubsection}{ 2D/3D Human pose-estimation: for SironaAI and student projects}\end{sSubsection}
-% \begin{sSubsection}{Improvised tracking to improve action detection and other projects}\end{sSubsection}
-% \begin{sSubsection}{Implmented object detectors for various research projects.}\end{sSubsection}
+% \begin{tabular}{@{\hspace{6ex}}l  @{\hspace{6ex}}l} %% @{} >{\bfseries}l @{\hspace{6ex}} l }
+% %Machine Learning &  Graph Co Model, Unsupervised Learning, \\&specializing in Latent Variable Models \& Variational Inference \\
+% Large scale detection, segmentation and tracking & Spatiotemporal action detection \\ 
+% Monocular depth estimation and 3D reconstruction & 3D human pose-estimation \\
+% \end{tabular}
 
 % \end{rSection}
-\switchcolumn
-\vspace{0.75mm}
-\begin{rSection}{Selected Int. Awards }{}
-\begin{sSubsection}{ECCV 22: Won Multisports-challenge}\end{sSubsection} % \hfill 2022
-\begin{sSubsection}{ICCV 19: Selected in doctoral consortium}\end{sSubsection}  %\hfill 2019
-\begin{sSubsection}{ICCV 19: Best reviewer award}\end{sSubsection} %\hfill 2019
-% \begin{sSubsection}{150th Anniversary PhD Scholarship, Oxford Brookes University}\end{sSubsection} % \hfill 2015
-\begin{sSubsection}{CVPR 17: Second in Charades-challenge}\end{sSubsection} % \hfill 2016 , Action Recognition
-\begin{sSubsection}{CVPR 16: Second in ActivityNet-challenge}\end{sSubsection} % \hfill 2016 , ActionDetection
-\end{rSection}
 
-% \vspace{0.1in}
-\begin{rSection}{Technical Skills}{} 
-\begin{sSubsection}{{Programming}: Python, Matlab, C/C++}\end{sSubsection}
-\begin{sSubsection}{{DeepLearning}: PyTorch, Torch, Caffe, TensorFlow, Keras, Lightning, JAX}\end{sSubsection}
-\begin{sSubsection}{{Libraries}: Open3D, SkLearn, OpenCV, PySLowFast, YOLOv5, Detectron, MMCV}\end{sSubsection}
-\begin{sSubsection}{{Mobile-development}: TFLite, TorchLite, ONNX}\end{sSubsection}
-% \begin{sSubsection}{{Other}: Unit-testing, Git, SVN}\end{sSubsection} %% Code-review,
-\begin{sSubsection}{Slurm, Sbatch, AWS, DGX}\end{sSubsection}
-% \begin{sSubsection}{Trained: CNN, RNN, LSTM, GNN, Transformer, GANs}\end{sSubsection}
-\begin{sSubsection}{Managed 6+ GPU-machines for 3 years}\end{sSubsection}
-% \vspace{0.1in}
-\end{rSection}
 
-% \begin{rSection}{Soft Skills}{} 
-%   \begin{sSubsection}{Problem-solving, Critical-thinking, Collaboration, Leadership, 
-%   Constructive-feedback, Openness to criticism, Persuasive, Presentation, Public-speaking, Adaptive personality, open to new ideas/ways-of-working}\end{sSubsection}
-  % }\end{sSubsection}
-  % \begin{sSubsection}{{\bf Teamwork}: demonstrated in multiple projects involving more than few contributors, e.g. ROAD}\end{sSubsection}
-  % \begin{sSubsection}{{\bf Leadership}: demonstrated via leading above projects and student supervision}\end{sSubsection}
-  % \begin{sSubsection}{
-    
-  % \begin{sSubsection}{{\bf Mobile-development}: iOS-APP-Dev, TFLite, TorchLite, ONNX}\end{sSubsection}
-  % \begin{sSubsection}{{\bf Other}: Unit-testing, Git, SVN}\end{sSubsection} %% Code-review,
-  % \begin{sSubsection}{AWS, Colab, Slurm, Sbatch, DGX}\end{sSubsection}
-  % \begin{sSubsection}{Trained: CNN, RNN, LSTM, GNN, Transformer, GANs}\end{sSubsection}
-  % \begin{sSubsection}{Managed 6+ GPU-machines for 3 years}\end{sSubsection}
-  % \vspace{0.1in}
-  % \end{rSection}
-
-\vspace{1.1mm}
-\begin{rSection}{References}{} 
-\begin{sSubsection}{Prof. Luc V. Gool (ETH Zurich) \\
-     Prof. Fabio Cuzzolin (Oxford Brookes Uni.) \\
-     Prof. Leonid Sigal (UBC Vancouver) \\
-     Prof. Philip Torr (Oxford University)\\
-     Dr. Georgios Evangelidis (Snap Inc)}\end{sSubsection}
-% \item \href{https://ps.is.tuebingen.mpg.de/person/alehrmann}{Dr. Andreas Lehrmann}, BorealisAI, Vancouver, Canada.
-% \item \href{http://homepages.inf.ed.ac.uk/rbf/}{Professor Bob Fisher}, University of Edinburgh, UK.
-% \item \href{https://team.inria.fr/perception/team-members/radu-patrice-horaud/}{Professor Radu Patrice HORAUD}, INRIA, Grenoble, France.
-% \item \href{http://www.cfar.umd.edu/~kale/}{Dr. Amit Kale}, Bosch Research, India.
-  % \begin{lSubsection}{{john.doe}}\end{lSubsection}
-  % }\end{sSubsection}
-  % \begin{sSubsection}{{\bf Teamwork}: demonstrated in multiple projects involving more than few contributors, e.g. ROAD}\end{sSubsection}
-  % \begin{sSubsection}{{\bf Leadership}: demonstrated via leading above projects and student supervision}\end{sSubsection}
-  % \begin{sSubsection}{
-    
-  % \begin{sSubsection}{{\bf Mobile-development}: iOS-APP-Dev, TFLite, TorchLite, ONNX}\end{sSubsection}
-  % \begin{sSubsection}{{\bf Other}: Unit-testing, Git, SVN}\end{sSubsection} %% Code-review,
-  % \begin{sSubsection}{AWS, Colab, Slurm, Sbatch, DGX}\end{sSubsection}
-  % \begin{sSubsection}{Trained: CNN, RNN, LSTM, GNN, Transformer, GANs}\end{sSubsection}
-  % \begin{sSubsection}{Manged 6+ GPU-machines for 3 years}\end{sSubsection}
-  % \vspace{0.1in}
-  \end{rSection}
-
-\end{paracol}
-% \end{multicols}
-% \end{vwcol} 
-
+%----------------------------------------------------------------------------------------
+%	Publication and research projects SECTION
+%----------------------------------------------------------------------------------------
 \vspace{0.1in}
 \begin{rSection}{Selected Publications}{18+\footnotesize{ in TPAMI, ICCV, CVPRW, ECCVW, WACV, ACCV, BMVC, ICPR}}
-  %%
-  % \verb|Github|: \googlescholarsocialsymbol \par
-  % \href{\aiGoogleScholar}{https://scholar.google.com/citations?user=w8XHUMIAAAAJ&hl=en}
-  %------------------------------------------------
-  \begin{pSubsection}{\textbf{G. Singh}, V. Choutas, S. Saha, F. Yu, L.V. Gool}{Spatiotemporal action detection under large motion}{WACV}{ 23}\end{pSubsection}
-  \begin{pSubsection}{\textbf{G. Singh}, \textit{et al.}, and
-    % , Valentina Fontana, Reza Javanmard Alitappeh, Salman Khan, Suman Saha, Kossar Jeddisaravi, Farzad Yousefi, Jacob Culley, Tom Nicholson, Jordan Omokeowa, Salman Khan, Stanislao Grazioso, Andrew Bradley, Giuseppe Di Gironimo, 
-    F. Cuzzolin}{ROAD: the road event awareness dataset for autonomous driving}{TPAMI}{ 22}\end{pSubsection}
-  \begin{pSubsection}{\textbf{G. Singh}, F. Cuzzolin}{Recurrent convolutions for causal 3D CNNs}{ICCVW}{ 19}\end{pSubsection}
-  \begin{pSubsection}{\textbf{G. Singh}, S. Saha and F. Cuzzolin}{Predicting action tubes}{ECCVW}{ 18}\end{pSubsection}
-  \begin{pSubsection}{\textbf{G. Singh}, \textit{et al.}, and PHS Torr, F. Cuzzolin}{Online realtime multiple spatiotemporal action localisation}{ICCV}{ 17}\end{pSubsection}
-  \begin{pSubsection}{G. Evangelidis, \textbf{G. Singh}, R. Horaud}{Skeletal quads: human action recognition using joint quadruples}{ICPR}{ 14}\end{pSubsection}
-  
-  \end{rSection}
+%------------------------------------------------
+
+\small{\textbf{Gurkirt Singh}, Vasileios Choutas, Suman Saha, Fisher Yu, Luc Van Gool},
+\textbf{Spatio-Temporal Action Detection Under Large Motion},
+\textit{\small{IEEE/CVF Winter Conference on Applications of computer Vision (WACV), 2023}}
+
+%-----------------------------------------------
+% \vspace{-0.03in}
+\small{\textbf{Gurkirt Singh}, Stephen Akrigg, Manuele Di Maio, .... others \&,
+% , Valentina Fontana, Reza Javanmard Alitappeh, Salman Khan, Suman Saha, Kossar Jeddisaravi, Farzad Yousefi, Jacob Culley, Tom Nicholson, Jordan Omokeowa, Salman Khan, Stanislao Grazioso, Andrew Bradley, Giuseppe Di Gironimo, 
+Fabio Cuzzolin},
+\textbf{ROAD: The ROad Event Awareness Dataset for Autonomous Driving},
+\textit{\small{IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2022}}
+
+
+% \vspace{-0.03in}
+% \small{Vivek Singh Bawa, \textbf{Gurkirt Singh}, Francis KapingA, .... others \&, 
+% %  Inna Skarga-Bandurova, Alice Leporini, Carmela Landolfo, Armando Stabile, Francesco Setti, Riccardo Muradore, Elettra Oleari, 
+% Fabio Cuzzolin},
+% \textbf{ESAD: Endoscopic Surgeon Action Detection Dataset},
+% \textit{\small{Preprint arXiv: 2006.07164, 2021}}
+
+\vspace{-0.03in}
+\small{Suman Saha, \textbf{Gurkirt Singh}, Michael Sapienza, Philip HS Torr, Fabio Cuzzolin}
+\textbf{Spatio-Temporal Action Instance Segmentation and Localisation}
+\textit{\small{Book Chapter: Modelling Human Motion, 2020}}
+
+\vspace{-0.03in}
+\small{\textbf{Gurkirt Singh} and Fabio Cuzzolin},
+\textbf{Recurrent Convolutions for Causal 3D CNNs},
+\textit{\small{Workshop on Large Scale Holistic Video Understanding, ICCV, 2019}}
+
+\vspace{-0.03in}
+\small{Silvio Olivastri, \textbf{Gurkirt Singh} and Fabio Cuzzolin},
+\textbf{An End-to-End Baseline for Video Captioning},
+\textit{\small{Workshop on Large Scale Holistic Video Understanding, ICCV, 2019}}
+
+% %-----------------------------------------------
+% \vspace{-0.03in}
+% \textbf{Action Detection from a Robot-Car Perspective}
+% \vspace{-0.08in}
+% \small{\textbf{Gurkirt Singh}${}^*$, Stephen Akrigg${}^*$, Valentina Fontana${}^*$, 
+% Manuele Di Maio, Suman Saha, Fabio Cuzzolin}
+% \vspace{-0.08in}
+% \textit{\small{Preprint arXiv: 1807.11332, 2018}}
+
+% %------------------------------------------------
+\vspace{-0.03in}
+\small{\textbf{Gurkirt Singh}, Suman Saha and Fabio Cuzzolin},
+\textbf{TraMNet - Transition Matrix Network for Efficient Action Tube Proposals},
+\textit{\small{Asian Conference on Computer Vision (ACCV), 2018}}
+
+
+% %------------------------------------------------
+% \vspace{0.03in}
+% \small{Harkirat Behl, Michael Sapienza \textbf{Gurkirt Singh}, Suman Saha, Fabio Cuzzolin and Philip Torr},
+% \textbf{Incremental Tube Construction for Human Action Detection},
+% \textit{\small{British Machine Vision Conference (BMVC), 2018}}
+
+
+% %------------------------------------------------
+% \vspace{-0.03in}
+% \small{\textbf{Gurkirt Singh}, Suman Saha and Fabio Cuzzolin},
+% \textbf{Predicting Action Tubes},
+% \textit{\small{Workshop on Anticipating Human Behavior, ECCV 2018}}
+
+
+% %------------------------------------------------
+\vspace{-0.03in}
+\small{\textbf{Gurkirt Singh}, Suman Saha, Michael Sapienza, Philip Torr and Fabio Cuzzolin},
+\textbf{Online Real-time Multiple Spatiotemporal Action Localisation and Prediction},
+\textit{\small{International Conference on Computer Vision (ICCV), 2017}}
+
+
+% %------------------------------------------------
+\vspace{-0.03in}
+\textbf{AMTnet: Action-Micro-Tube Regression by end-to-end Trainable Deep Architecture},
+\small{Suman Saha, \textbf{Gurkirt Singh} and Fabio Cuzzolin},
+\textit{\small{International Conference on Computer Vision (ICCV), 2017}}
+
+
+% %-----------------------------------------------
+\vspace{-0.03in}
+\small{Suman Saha, \textbf{Gurkirt Singh}, Michael Sapienza, Philip Torr and Fabio Cuzzolin},
+\textbf{Deep Learning for Detecting Multiple Space-Time Action Tubes in Videos},
+\textit{\small{British Machine Vision Conference (BMVC), 2016}}
+
+%------------------------------------------------
+% \vspace{-0.03in}
+% \small{\textbf{Gurkirt Singh} and Fabio Cuzzolin},
+% \textbf{Untrimmed Video Classification for Activity Detection: Submission to ActivityNet Challenge},
+% \textit{\small{ActivityNet Challenge Workshop, CVPR 2016}}
+
+
+%------------------------------------------------
+\vspace{-0.03in}
+\small{Georgios Evangelidis, \textbf{Gurkirt Singh}, Radu Horaud},
+\textbf{Skeletal Quads: Human action recognition using joint quadruples},
+\textit{\small{International Conference on Pattern Recognition Vision (ICPR), 2014}}
+
+
+% \vspace{-0.03in}
+% \small{Georgios Evangelidis, \textbf{Gurkirt Singh}, Radu Horaud},
+% \textbf{Continuous Gesture Recognition from Articulated Poses},
+% \textit{\small{Workshop on Looking at People (Chalearn), ECCV 2014}}
+
+
+% %------------------------------------------------
+% \textbf{Frame-wise Representations of Depth Videos for Action Recognition}
+% \vspace{-0.08in}
+% \small{\textbf{Gurkirt Singh}}
+% \vspace{-0.08in}
+% \textit{\small{Master's thesis, Grenoble INP, 2013}}
+% %------------------------------------------------
+% \textbf{Categorising the Abnormal Behaviour from an Indoor Overhead Camera}
+% \vspace{-0.08in}
+% \small{\textbf{Gurkirt Singh}}
+% \vspace{-0.08in}
+% \textit{\small{Bachelor's thesis, VIT University, 2010}}
+
+\end{rSection}
+
+% \vspace{0.1in}
+% ---------------
+\begin{rSection}{Awards \& Challenges}{} \itemsep -2pt
+  % \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\item \textbf{Multisports-Challenge, DeeperAction ECCV'22}: Winner of Action Detection Track \hfill 2022
+\item \textbf{Doctoral Consortium}: Selected for Doctoral Consortium Award ICCV-2019 \hfill 2019
+\item \textbf{Best Reviewer}: Selected as the best reviewer for ICCV-2019 \hfill 2019
+\item \textbf{PhD Scholarship}: 150th Anniversary PhD Scholarship, Oxford Brookes University \hfill 2015
+\item \textbf{Charades-Challenge 2017}: Acton Recognition and Segmentation tasks (Rank: 2/10 and 3/6) \hfill 2017
+\item \textbf{ActivityNet-Challenge 2017}: Classification tasks (Rank 3/29)  \hfill 2017
+\item \textbf{ActivityNet-Challenge 2016}: Classification and Detection tasks (Rank 10/24 and 2/6) \hfill 2016
+\item \textbf{Chalearn-Challenge 2014}: Looking at People Challenge (Gesture Detection Task Rank 7/17) \hfill 2014
+%Chalearn Multi-Modal Gesture Recognition Challenge (Rank 17/54) \hfill 2013
+% \end{tabular}
+\end{rSection}
+
+
+% \vspace{0.1in}
+\begin{rSection}{Skills}{} \itemsep -2pt
+\item  \textbf{Programming}: Python, Matlab, C/C++, Lua
+\item  \textbf{Deep Learning Platforms}: PyTorch, JAX, Torch, Caffe, TensorFlow, Keras
+\item  \textbf{Libraries}: Numpy, Scipy, Scikit-Learn, OpenCV, Eigen, Kinect SDK, Wandb
+\item  \textbf{Operating Systems}: Linux, macOS, Windows
+% \item  \textbf{Development Environments:} VS code, Eclipse, Spyder, Pycharm.
+\end{rSection}
+
+\vspace{0.1in}
+\begin{rSection}{Teaching Experience}{} \itemsep -2pt
+  \item  \textbf{Machine Learning}: Teaching Assistant (Postgraduate) \hfill 2018
+  \item  \textbf{Computer Vision and Machine Learning}: Guest lecturer (Postgraduate) \hfill 2016, 2017, 2018
+  \item  \textbf{Understanding Programming}: Lab Assistant (Undergraduate)  \hfill 2015, 2016, 2017
+\end{rSection}
+
+\clearpage
+
+\vspace{0.1in}
+\begin{rSection}{Community Contributions}{} \itemsep -2pt
+    \item Co-cognised workshop on The ROAD Challenge ICCV 2023.
+    \item Co-cognised workshop on The ROAD Challenge ICCV 2021.
+    \item Co-cognised workshop on ESAD challenge for surgeon action detection, MIDL 2020.
+    \item Best reviewer award ICCV 2019
+    \item Reviewer: TPAMI 2017, 2018, ICCV 2019, 2021, ECCV 2020, 2022 CVPR 2018,2019,2020,2021,2022 BMVC 2018,2019 and IJCIA 2017, 2018, 2019
+\end{rSection}
+
+
+\vspace{0.1in}
+\begin{rSection}{Languages}{}  \itemsep -2pt
+  English (C1), German (A2) Punjabi (Maternal), Hindi (Maternal)
+\end{rSection}
+
+\vspace{0.1in}
+\begin{rSection}{References}{}  \itemsep -2pt
+\item \href{https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html}{Professor Luc Van Gool}, ETH Zurich, Switzerland.
+\item \href{http://cms.brookes.ac.uk/staff/FabioCuzzolin/}{Professor Fabio Cuzzolin}, Oxford Brookes University, UK.
+\item \href{https://www.cs.ubc.ca/~lsigal/}{Professor Leonid Sigal}, University of British Columbia, Canada.
+\item \href{http://www.robots.ox.ac.uk/~phst/}{Professor Philip Torr}, University of Oxford, UK.
+\item \href{https://team.inria.fr/perception/team-members/evangelidis/}{Dr. Georgios Evangelidis}; Snap, Vienna, Austria.
+\item \href{https://ps.is.tuebingen.mpg.de/person/alehrmann}{Dr. Andreas Lehrmann}, BorealisAI, Vancouver, Canada.
+\item \href{http://homepages.inf.ed.ac.uk/rbf/}{Professor Bob Fisher}, University of Edinburgh, UK.
+% \item \href{https://team.inria.fr/perception/team-members/radu-patrice-horaud/}{Professor Radu Patrice HORAUD}, INRIA, Grenoble, France.
+\item \href{http://www.cfar.umd.edu/~kale/}{Dr. Amit Kale}, Bosch Research, India.
+\end{rSection}
+
+\vspace{0.1in}
+\begin{rSection}{More Information}{}  \itemsep -2pt
+  \item \textbf{Google Scholar}: \url{https://scholar.google.com/citations?user=w8XHUMIAAAAJ&hl=en}
+  \item \textbf{Homepage}: \url{http://gurkirt.github.io/}
+  \item \textbf{Github}: \url{https://github.com/gurkirt}
+  \item \textbf{LinkdIn}: \url{https://www.linkedin.com/in/gurkirt/}
+\end{rSection}
+
 
 \end{document}

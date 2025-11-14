@@ -1,6 +1,6 @@
 all: pdf
 
-foo=cv_gurkirt_short_singh
+foo=cv_gurkirt_singh
 
 pdf: *.tex
 	pdflatex $(foo).tex
@@ -14,7 +14,7 @@ bib: *.tex
 	evince $(foo).pdf &
 
 clean:
-	rm -rf *.aux *.bbl *.blg *.log *.brf
+	rm -rf *.aux *.bbl *.blg *.log *.brf *.fdb_latexmk *.out *.fls *.gz
 
 cleanbeamer:
 	rm -rf *.nav *.snm *.toc *.bak
